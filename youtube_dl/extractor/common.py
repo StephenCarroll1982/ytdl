@@ -2045,6 +2045,7 @@ class InfoExtractor(object):
             return self._xpath_ns(path, namespace)
 
         def is_drm_protected(element):
+            return False
             return element.find(_add_ns('ContentProtection')) is not None
 
         def extract_multisegment_info(element, ms_parent_info):
